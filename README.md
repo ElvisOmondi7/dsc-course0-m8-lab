@@ -5,7 +5,7 @@
 This project analyses **88,889 aviation accident records (1948–2022)** compiled by the NTSB,
 filtered to professionally built aircraft involved in accidents from 1983 onwards.
 The goal is to identify aircraft makes/models and conditions associated with the lowest
-rates of passenger injury and aircraft destruction — information directly useful to an
+rates of passenger injury and aircraft destruction - information directly useful to an
 airline/airplane insurer.
 
 ---
@@ -13,12 +13,12 @@ airline/airplane insurer.
 ## Repository Structure
 
 ```
-├── AviationData.csv                      # Raw NTSB accident data
-├── USState_Codes.csv                     # State abbreviation lookup
-├── Aviation_Accidents_Cleaning.ipynb     # Data cleaning pipeline
-├── Aviation_Accidents_Data_Analysis.ipynb # EDA, visualisation, and recommendations
-├── aviation_cleaned.csv                  # Cleaned dataset (output of cleaning notebook)
-└── README.md                             # This file
+AviationData.csv                      # Raw NTSB accident data
+USState_Codes.csv                     # State abbreviation lookup
+Aviation_Accidents_Cleaning.ipynb     # Data cleaning pipeline
+Aviation_Accidents_Data_Analysis.ipynb # EDA, visualisation, and recommendations
+aviation_cleaned.csv                  # Cleaned dataset (output of cleaning notebook)
+README.md                             # This file
 ```
 
 ---
@@ -29,7 +29,7 @@ airline/airplane insurer.
 - **Investigation type:** Accidents only (excluded incidents/near-misses)
 - **Amateur built:** Excluded (professional builds only)
 - **Date:** 1983 onwards (40-year max model lifetime)
-- **Category:** Airplane (Aircraft.Category == 'Airplane' or NaN — the category field has 64% missing values, and helicopter-specific makes are removed during Make cleaning)
+- **Category:** Airplane (Aircraft.Category == 'Airplane' or NaN - the category field has 64% missing values, and helicopter-specific makes are removed during Make cleaning)
 
 **Cleaned dataset: 64,211 records**
 
@@ -51,7 +51,7 @@ All make/model comparisons require a minimum of **10 accident records** per grou
 
 ## Aircraft Recommendations
 
-### ✈️ Large Aircraft (> 20 passengers)
+### Large Aircraft (> 20 passengers)
 
 | Make | Mean Injury Fraction | Destruction Rate | n |
 |---|---|---|---|
@@ -72,7 +72,7 @@ All make/model comparisons require a minimum of **10 accident records** per grou
 | McDonnell Douglas MD-88 | 0.007 | 12 |
 | Embraer EMB-145LR | 0.016 | 12 |
 
-### 🛩️ Small Aircraft (≤ 20 passengers)
+### Small Aircraft (≤ 20 passengers)
 
 | Make | Mean Injury Fraction | Destruction Rate | n |
 |---|---|---|---|
@@ -137,9 +137,9 @@ single-engine aircraft for commercial/passenger operations.
 | File | Description |
 |---|---|
 | `fig_makes_injury_fraction.png` | Top 15 safest makes (injury fraction) for small & large |
-| `fig_violin_small_makes.png` | Injury fraction distribution — top 10 small makes |
-| `fig_strip_large_makes.png` | Injury fraction distribution — top 10 large makes |
-| `fig_makes_destruction_rate.png` | Destruction rate — top 15 small & large makes |
+| `fig_violin_small_makes.png` | Injury fraction distribution - top 10 small makes |
+| `fig_strip_large_makes.png` | Injury fraction distribution - top 10 large makes |
+| `fig_makes_destruction_rate.png` | Destruction rate - top 15 small & large makes |
 | `fig_small_models.png` | Safest specific models for small aircraft |
 | `fig_large_models.png` | Safest specific models for large aircraft |
 | `fig_weather_condition.png` | Injury fraction & destruction rate by weather |
@@ -151,5 +151,5 @@ single-engine aircraft for commercial/passenger operations.
 
 ## Tools & Libraries
 
-- **Python 3.9** — pandas, numpy, matplotlib, seaborn
-- **Jupyter Notebook** — interactive analysis and documentation
+- **Python 3.9** - pandas, numpy, matplotlib, seaborn
+- **Jupyter Notebook** - interactive analysis and documentation
