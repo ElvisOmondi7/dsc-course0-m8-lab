@@ -106,7 +106,7 @@ fatal/serious injuries compared to accidents in **Visual Meteorological Conditio
 - This reflects the higher prevalence of controlled-flight-into-terrain (CFIT) and spatial
   disorientation events under low-visibility conditions.
 
-![Weather Condition Chart](fig_weather_condition.png)
+![Weather Condition Chart](images/fig_weather_condition.png)
 
 **Implication:** Aircraft operated on routes with frequent IMC exposure represent materially
 elevated risk and should carry higher insurance premiums.
@@ -125,7 +125,7 @@ A clear **redundancy-safety** gradient exists:
 Single-engine aircraft have the highest injury and destruction rates. Each additional engine
 provides meaningful redundancy and dramatically improves outcomes when mechanical failures occur.
 
-![Engine Count Chart](fig_engine_count.png)
+![Engine Count Chart](images/fig_engine_count.png)
 
 **Implication:** Multi-engine aircraft represent a significantly better risk profile than
 single-engine aircraft for commercial/passenger operations.
