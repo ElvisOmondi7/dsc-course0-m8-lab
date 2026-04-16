@@ -42,8 +42,8 @@ README.md                             # This file
 
 ### Aircraft Size Split
 A threshold of **20 total on board** separates small from large aircraft:
-- **Small (≤ 20):** 61,093 records
-- **Large (> 20):** 3,118 records
+- **Small (≤ 20):** 62,959 records
+- **Large (> 20):** 1,252 records
 
 All make/model comparisons require a minimum of **10 accident records** per group.
 
@@ -69,29 +69,29 @@ All make/model comparisons require a minimum of **10 accident records** per grou
 | Boeing 717-200 | 0.002 | 10 |
 | Boeing 757-232 | 0.005 | 16 |
 | Bombardier CL-600-2B19 | 0.006 | 12 |
+| Boeing 757-222 | 0.007 | 11 |
 | McDonnell Douglas MD-88 | 0.007 | 12 |
-| Embraer EMB-145LR | 0.016 | 12 |
 
 ### Small Aircraft (≤ 20 passengers)
 
 | Make | Mean Injury Fraction | Destruction Rate | n |
 |---|---|---|---|
 | Waco | 0.103 | 0.088 | 137 |
+| Grumman-Schweizer | 0.112 | 0.017 | 127 |
 | Maule | 0.154 | 0.093 | 569 |
 | Aviat Aircraft Inc | 0.162 | 0.039 | 77 |
-| Cessna | ~0.19 | ~0.16 | 25,410 |
-| Beech | ~0.20 | ~0.18 | 4,917 |
-| Mooney | ~0.20 | ~0.18 | 1,249 |
 
-**Top specific models (small):**
+Note: Cessna (injury fraction ~0.244, n=25,442), Beech (~0.377, n=4,941), and Mooney (~0.372, n=1,249) rank outside the top 15 for injury fraction among small aircraft.
+
+**Top specific models (small, from top-10 makes):**
 
 | Model | Mean Injury Fraction | n |
 |---|---|---|
-| Diamond Aircraft DA 20 C1 | 0.000 | 11 |
-| Cessna 180C | 0.000 | 14 |
 | Maule MX-7-235 | 0.029 | 17 |
-| Schweizer SGS 2-33A | 0.033 | 45 |
-| Cessna C172 | 0.042 | 12 |
+| Hiller UH12E | 0.045 | 11 |
+| Maule M-7-235B | 0.050 | 10 |
+| Grumman-Schweizer G-164A | 0.053 | 50 |
+| Maule M-4 | 0.056 | 18 |
 
 ---
 
@@ -99,36 +99,36 @@ All make/model comparisons require a minimum of **10 accident records** per grou
 
 ### Factor 1: Weather Condition (VMC vs IMC)
 
-Accidents in **Instrument Meteorological Conditions (IMC)** are 2–3× more likely to result in
-fatal/serious injuries compared to accidents in **Visual Meteorological Conditions (VMC)**.
+Accidents in **Instrument Meteorological Conditions (IMC)** are nearly **3× more likely** to
+result in fatal/serious injuries compared to accidents in **Visual Meteorological Conditions (VMC)**:
 
-- IMC accidents also have substantially higher aircraft destruction rates.
-- This reflects the higher prevalence of controlled-flight-into-terrain (CFIT) and spatial
-  disorientation events under low-visibility conditions.
+- Mean injury fraction: **IMC = 0.664** vs **VMC = 0.227**
+- Aircraft destruction rate: **IMC = 0.599** vs **VMC = 0.177**
 
-![Weather Condition Chart](images/fig_weather_condition.png)
+This reflects the higher prevalence of controlled-flight-into-terrain (CFIT) and spatial
+disorientation events under low-visibility conditions.
 
-**Implication:** Aircraft operated on routes with frequent IMC exposure represent materially
+**Implication:** Aircraft operated on routes with frequent IMC exposure represent substantially
 elevated risk and should carry higher insurance premiums.
 
 ### Factor 2: Number of Engines
 
-A clear **redundancy-safety** gradient exists:
+The relationship between engine count and safety outcomes is more nuanced than a simple redundancy gradient:
 
 | Engines | Mean Injury Fraction | Mean Destruction Rate | n |
 |---|---|---|---|
-| 1 | ~0.22 | ~0.22 | ~56,000 |
-| 2 | ~0.12 | ~0.16 | ~7,000 |
-| 3 | ~0.08 | ~0.20 | ~390 |
-| 4 | ~0.09 | ~0.16 | ~370 |
+| 1 | 0.252 | 0.194 | 52,138 |
+| 2 | 0.338 | 0.326 | 7,938 |
+| 3 | 0.070 | 0.128 | 175 |
+| 4 | 0.235 | 0.297 | 199 |
 
-Single-engine aircraft have the highest injury and destruction rates. Each additional engine
-provides meaningful redundancy and dramatically improves outcomes when mechanical failures occur.
+Three-engine widebodies show the best outcomes by a wide margin. Twin-engine aircraft have
+**higher** aggregate injury and destruction rates than single-engine aircraft — likely due to
+selection bias, as twins are more commonly used for commercial IFR operations under riskier
+conditions with fuller passenger loads.
 
-![Engine Count Chart](images/fig_engine_count.png)
-
-**Implication:** Multi-engine aircraft represent a significantly better risk profile than
-single-engine aircraft for commercial/passenger operations.
+**Implication:** Engine count alone is an insufficient risk discriminator. Aircraft type and
+operational context (commercial vs. private, IMC vs. VMC exposure) are essential co-variates.
 
 ---
 
